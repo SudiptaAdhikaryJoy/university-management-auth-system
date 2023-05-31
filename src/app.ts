@@ -13,15 +13,19 @@ app.use(express.urlencoded({ extended: true }))
 //Application routes
 app.use('/api/v1/users', usersRouter)
 
+// app.get('/', async (req: Request, res: Response) => {
+//   // await usersService.createUser({
+//   //     id:"999",
+//   //     password: '1234',
+//   //     role: 'student'
+//   // })
+//   res.status(200).json({
+//     status: 'success',
+//   })
+// })
+
 app.get('/', async (req: Request, res: Response) => {
-  // await usersService.createUser({
-  //     id:"999",
-  //     password: '1234',
-  //     role: 'student'
-  // })
-  res.status(200).json({
-    status: 'success',
-  })
+  res.send('server working')
 })
 
 export default app
